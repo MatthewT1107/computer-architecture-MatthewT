@@ -1,6 +1,5 @@
 // Pwm Cycle
 
-
 module pwm_cycle #(
     parameter INC_DEC_INTERVAL = 2000, 
     parameter INC_DEC_MAX = 1000,            
@@ -22,12 +21,9 @@ module pwm_cycle #(
     localparam PWM_FLOOR1 = 3'b101;
     localparam PWM_FLOOR2 = 3'b110;
 
-
     // Declare state variables
     logic[2:0] current_state = STARTING_STATE;
     logic[2:0] next_state;
-
-    
 
     // Declare variables for timing state transitions
     logic [$clog2(INC_DEC_INTERVAL) - 1:0] count = 0;
@@ -44,7 +40,6 @@ module pwm_cycle #(
         time_to_transition = 0;
     end
 
-        
         // Register the next state of the FSM
     always_ff @(posedge time_to_transition)
         current_state <= next_state;
@@ -96,9 +91,5 @@ module pwm_cycle #(
             time_to_transition <= 1'b0;
         end
     end
-
-
-
-  
 
 endmodule
