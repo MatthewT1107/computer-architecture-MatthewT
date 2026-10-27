@@ -3,9 +3,7 @@
 
 module led_matrix_tb;
 
-    logic clk = 0;
-    logic SW = 1'b1;
-    logic BOOT = 1'b1;
+    logic clk = 0;  
     logic _48b, _45a;
 
     top u0 (
