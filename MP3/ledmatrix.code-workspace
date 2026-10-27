@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../../iceBlinkPico-main/examples"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
